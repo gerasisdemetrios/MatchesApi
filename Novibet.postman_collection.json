@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "96b52c2a-8dee-4a34-9794-2fed77d45a8b",
+		"name": "Novibet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get matches",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6600/api/matches",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6600",
+					"path": [
+						"api",
+						"matches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save match",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Description\": \"OSFP-PAO\",\r\n    \"MatchDate\": \"2021-03-19T00:00:00\",\r\n    \"MatchTime\": \"12:00:00\",\r\n    \"TeamA\": \"OSFP\",\r\n    \"TeamB\": \"PAO\",\r\n    \"Sport\": 1,\r\n    \"MatchOdds\": [\r\n        {\r\n            \"MatchId\": 5,\r\n            \"Specifier\": \"X\",\r\n            \"Odd\": 1.5\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6600/api/matches",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6600",
+					"path": [
+						"api",
+						"matches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete match",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6600/api/matches/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6600",
+					"path": [
+						"api",
+						"matches",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update match",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"Id\": 1,\r\n        \"Description\": \"OSFP-PAO\",\r\n        \"MatchDate\": \"2021-03-19T00:00:00\",\r\n        \"MatchTime\": \"12:00:00\",\r\n        \"TeamA\": \"OSFP\",\r\n        \"TeamB\": \"PAO\",\r\n        \"Sport\": 1,\r\n        \"MatchOdds\": [\r\n            {\r\n                \"Id\": 1,\r\n                \"MatchId\": 1,\r\n                \"Specifier\": \"X\",\r\n                \"Odd\": 1.5\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6600/api/matches/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6600",
+					"path": [
+						"api",
+						"matches",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -36,7 +36,7 @@ namespace Matches
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Novibet Api", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Matches Api", Version = "v1" });
             });
 
             services.AddControllers().AddNewtonsoftJson(options =>
@@ -55,7 +55,7 @@ namespace Matches
                 app.UseSwagger();
                 app.UseSwaggerUI(c =>
                 {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Novibet API V1");
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Matches API V1");
                     c.RoutePrefix = string.Empty;
                 });
             }
